@@ -1,6 +1,7 @@
 public class Heranca00 {
     public static void main(String[] args) {
         System.out.println("funfeia!");
+
         Cachorro fred = new Cachorro();
         fred.fazBarulho();
         fred.descrever();
@@ -9,9 +10,14 @@ public class Heranca00 {
         minerin.fazBarulho();
         minerin.descrever();
 
-        Javali jorge = new Javali();
-        jorge.fazBarulho();
-        jorge.descrever();
+        CachorroP pumba = new CachorroP();
+        pumba.fazBarulho();
+        pumba.descrever();
+
+        CachorroV viralata = new CachorroV();
+        viralata.fazBarulho();
+        viralata.descrever();
+
 
     }
 
@@ -19,7 +25,7 @@ public class Heranca00 {
 
 abstract class Animal {
     String nome;
-    String onomatopeia; // representacao sonora emitida pelo animal
+    String onomatopeia; //representacion en sonido emitido por un animal!
     String cor;
     Integer idade;
     String raca;
@@ -30,6 +36,7 @@ abstract class Animal {
 
     public void descrever() {
         System.out.println("Raça: " + this.raca);
+        System.out.println("Onomatopeia: " + this.onomatopeia);
         System.out.println("Idade: " + this.idade);
         System.out.println("Cor: " + this.cor);
         System.out.println("Nome: "+ this.nome);
@@ -39,7 +46,7 @@ abstract class Animal {
 }
 
 class Cachorro extends Animal {
-    Cachorro() { // metodo construtor, o que define o cão !
+    Cachorro() { //metodo constructor, para describir la clase cachorro!
         this.nome = "fred";
         this.onomatopeia = "au au";
         this.raca = "vira-lata";
@@ -49,7 +56,8 @@ class Cachorro extends Animal {
 }
 
 class Gato extends Animal {
-    public Gato() { //metodo construtor, que define o gato !
+    public Gato() { 
+        this.nome = "gatito";
         this.onomatopeia = "miar";
         this.raca = "de-rua";
         this.cor = "Malhado";
@@ -58,13 +66,24 @@ class Gato extends Animal {
     }
 }
 
-class Javali extends Animal {
-    public Javali() {
-        this.onomatopeia = "*BARULHO-DE-JAVALI*";
-        this.raca = "PRAGA";
+class CachorroP extends Animal {
+    public CachorroP() {
+        this.nome = "Pumba";
+        this.onomatopeia = "UAUAU";
+        this.raca = "Pitbull";
         this.cor = "Preto";
         this.idade = 12;
 
     }
 }
 
+class CachorroV extends Animal {
+    public CachorroV() {
+        this.nome = "Bobi";
+        this.onomatopeia = "Uau";
+        this.raca = "viralata";
+        this.cor = "marron";
+        this.idade = 10;
+
+    }
+}
