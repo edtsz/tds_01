@@ -2,18 +2,19 @@ public class Heranca00 {
     public static void main(String[] args) {
         System.out.println("Inicio!");
 
-        Cachorro cao1 = new Cachorro("Clovis");
+        Cachorro cao1 = new Cachorro("Clovis", "Pastor", "Pretoooo", "26", "");
         System.out.println(cao1);
         cao1.fazBarulho();
 
 
-        Cachorro cao2 = new Cachorro("Mandioca");
+        Cachorro cao2 = new Cachorro("Mandioca", "Pincher", "Pretoooo", "26", "");
         System.out.println(cao2);
         cao2.fazBarulho();
 
-        Cachorro cao3= new Cachorro("Lupita");
+        Cachorro cao3= new Cachorro("Lupita", "Pittbul", "Marron", "26", "");
         System.out.println(cao3);
         cao3.fazBarulho();
+
        // fred.descrever();
 
         /*
@@ -37,7 +38,7 @@ public class Heranca00 {
 abstract class Animal {
     String nome;
     String onomatopeia; 
-    Integer idade;
+    String idade;
     String raca;
     String cor;
 
@@ -68,12 +69,12 @@ abstract class Animal {
     }
 }
 class Cachorro extends Animal {
-    Cachorro(String nome) {
+    Cachorro(String nome, String raca, String cor, String idade, String onomatopeia) {
         this.nome = nome;
-        this.onomatopeia = "UAUAUA";
-        this.raca = "Pastor Aleman";
-        this.cor = "Preto-Marron";
-        this.idade = 3;
+        this.onomatopeia = onomatopeia;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
     }
 }
 
