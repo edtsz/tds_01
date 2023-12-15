@@ -5,6 +5,14 @@ abstract class Animal {
     protected String cor;
     protected Integer idade;
 
+    Animal(String _nome, String _cor, String _raca, Integer _idade, String _onomatopeia) {
+        this.nome = _nome;
+        this.cor = _cor;
+        this.raca = _raca;
+        this.idade = _idade;
+        this.onomatopeia = _onomatopeia;
+    }
+
     public void fazBarulho() {
         System.out.println(this.onomatopeia);
     }
