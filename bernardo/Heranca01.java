@@ -1,13 +1,13 @@
 public class Heranca01 {
     public static void main(String[] args) {
         
-        Cachorro fred = new Cachorro("fred");
+        Cachorro fred = new Cachorro("fred", "Vira-lata", "preto", "auau", 5);
         System.out.println(fred);
 
-        Cachorro thor = new Cachorro("thor");
+        Cachorro thor = new Cachorro("Thor","Pinscher", "Marrom", "auauauauau", 15);
         System.out.println(thor);
 
-        Cachorro romeu = new Cachorro("romeu");
+        Cachorro romeu = new Cachorro("Romeu","Salsicha","Caramelo","auau", 9);
         System.out.println(romeu);
     }
 
@@ -41,8 +41,12 @@ class Cachorro extends Animal {
         this.cor = "Caramelo";
         this.idade = 2;
     }
-    Cachorro(String nome){
-        this.nome = nome;
+    Cachorro(String nome, String raca, String cor, String onomatopeia, Integer idade){
+        this.nome = nome;    
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+        this.onomatopeia = onomatopeia;
     }
 
 }
