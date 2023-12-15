@@ -2,14 +2,17 @@ public class Heranca00{
     public static void main(String[] args) {
         System.out.println("Aoba!");
 
-        Cachorro a  = new Cachorro("Jairsaodamecanica");
+        Cachorro a  = new Cachorro("Jairsaodamecanica", "vira-lata", "negão", 12);
         System.out.println(a);
 
-        Gato b = new Gato("Nelsondospeneu");
-        System.out.println(b);
+        Cachorro cao1 = new Cachorro("clóvis", "chiuaua", "caramelo", 4);
+        System.out.println(cao1);
 
-        Cavalo c = new Cavalo("renataodaborracharia");
-        System.out.println(c);
+        Cachorro cao2 = new Cachorro("Mandioca", "pastor alemão", "branco", 7);
+        System.out.println(cao2);
+            
+        Cachorro cao3 = new Cachorro("Lupita", "chitzo", "marrom", 10);
+        System.out.println(cao3);
     }
 }
 abstract class Animal {
@@ -25,34 +28,16 @@ abstract class Animal {
         "Nome:" + this.nome + "\n" + 
         "Cor:" + this.cor + "\n" +
         "Idade:" + this.idade + "\n" +
-        "Som:" + this.onomatopeia;
+        "Som:" + this.onomatopeia + "\n";
     }
 
 }
 class Cachorro extends Animal {
-    Cachorro (String jairsaodamecanica) {
-        this.nome = jairsaodamecanica;
+    Cachorro (String nome, String raca, String cor, Integer idade) {
+        this.nome = nome;
         this.onomatopeia = "auauau";
-        this.cor = "negao";
-        this.raca = "vira-lata";
-        this.idade = 12;
-    }
-}
-class Gato extends Animal {
-    Gato (String nelsondospeneu) {
-        this.nome = nelsondospeneu;
-        this.onomatopeia = "miau";
-        this.cor = "branquelo";
-        this.raca = "num sei";
-        this.idade = 5;
-    }
-}
-class Cavalo extends Animal {
-    Cavalo (String renataodaborracharia) {
-        this.nome = renataodaborracharia;
-        this.onomatopeia = "***relinchos audazes***";
-        this.cor = "preto";
-        this.raca = "não sabo";
-        this.idade = 10;
+        this.cor = cor;
+        this.raca = raca;
+        this.idade = idade;
     }
 }
