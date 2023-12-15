@@ -6,7 +6,8 @@ public class Heranca00 {
         System.out.println(Joninhas);
         Cachorro Lupita = new Cachorro("Lupita", "Chow chow", "laranja", 5 ,"woof woof");
         System.out.println(Lupita);
-        
+        Gato Leia = new Gato("Léia", "Siames", "branco", 6, "miau miau");
+        System.out.println(Leia);
     }
 
 }
@@ -37,6 +38,15 @@ class Cachorro extends Animal {
         this.cor = cor;
         this.idade = idade;
         this.onomatopeia = onomatopeia;
+    }
+}
 
+class Gato extends Animal {
+    Gato(String nome, String raca, String cor, Integer idade, String onomatopeia) {
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+        this.onomatopeia = onomatopeia;
     }
 }
