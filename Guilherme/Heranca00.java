@@ -13,6 +13,9 @@ public class Heranca00{
             
         Cachorro cao3 = new Cachorro("Lupita", "chitzo", "marrom", 10);
         System.out.println(cao3);
+
+        Gato gato1 = new Gato("Cleideleia", "naosei", "amarelo", 5);
+        System.out.println(gato1);
     }
 }
 abstract class Animal {
@@ -36,6 +39,15 @@ class Cachorro extends Animal {
     Cachorro (String nome, String raca, String cor, Integer idade) {
         this.nome = nome;
         this.onomatopeia = "auauau";
+        this.cor = cor;
+        this.raca = raca;
+        this.idade = idade;
+    }
+}
+class Gato extends Animal {
+    Gato (String nome, String raca, String cor, Integer idade) {
+        this.nome = nome;
+        this.onomatopeia = "miau";
         this.cor = cor;
         this.raca = raca;
         this.idade = idade;
