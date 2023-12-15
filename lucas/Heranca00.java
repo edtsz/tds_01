@@ -1,14 +1,11 @@
 public class Heranca00 {
     public static void main(String[] args) {
         Cachorro rufus = new Cachorro();
-        rufus.fazBarulho();
-        rufus.descrever();
+        System.out.println(rufus);
         Cachorro astolfo = new Cachorro("astolfo", "au au", "Pastor-alemão", "marrom", 5);
-        astolfo.fazBarulho();
-        astolfo.descrever();
+        System.out.println(astolfo);
         Cachorro doggus = new Cachorro("doggus", "au au", "husky", "white", 3);
-        doggus.fazBarulho();
-        doggus.descrever();
+        System.out.println(doggus);
 
     }
 
@@ -16,25 +13,18 @@ public class Heranca00 {
 
 abstract class Animal {
     String nome;
-    String onomatopeia; // representacao sonora emitida pelo animal
+    String onomatopeia;
     String cor;
     Integer idade;
     String raca;
 
-    public void fazBarulho() {
-        System.out.println(this.onomatopeia);
-    }
 
-    public void descrever() {
-        System.out.println("Raça: " + this.raca);
-        System.out.println("Idade: " + this.idade);
-        System.out.println("Cor: " + this.cor);
-        System.out.println("Nome: "+ this.nome);
+    public String toString(){
+        return "Nome: " + this.nome + "\nRaça: " + this.raca  + "\nCor: " + this.cor  + "\nIdade: " + this.idade + "\nSom: " + this.onomatopeia;
+     }
 
     }
-
-}
-
+    
 class Cachorro extends Animal {
     public Cachorro() { 
         this.nome = "Rufus";
