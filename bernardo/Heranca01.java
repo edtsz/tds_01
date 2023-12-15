@@ -9,6 +9,9 @@ public class Heranca01 {
 
         Cachorro romeu = new Cachorro("Romeu","Salsicha","Caramelo","auau", 9);
         System.out.println(romeu);
+
+        Gato pelucio = new Gato("Pelucio","Persa","Caramelo","miaaauuuu", 3);
+        System.out.println(pelucio);
     }
 
 }
@@ -33,14 +36,8 @@ abstract class Animal {
     }
 }
 
-class Cachorro extends Animal {
-    Cachorro() { // metodo construtor, o que define o cão !
-        this.nome = "fred";
-        this.onomatopeia = "au au";
-        this.raca = "vira-lata";
-        this.cor = "Caramelo";
-        this.idade = 2;
-    }
+class Cachorro extends Animal{ 
+    
     Cachorro(String nome, String raca, String cor, String onomatopeia, Integer idade){
         this.nome = nome;    
         this.raca = raca;
@@ -48,5 +45,14 @@ class Cachorro extends Animal {
         this.idade = idade;
         this.onomatopeia = onomatopeia;
     }
+}
 
+class Gato extends Animal{
+    Gato(String nome, String raca, String cor, String onomatopeia, Integer idade){
+        this.nome = nome;    
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+        this.onomatopeia = onomatopeia;
+    }
 }
