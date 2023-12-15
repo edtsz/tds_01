@@ -1,10 +1,10 @@
 public class Heranca00 {
     public static void main(String[] args) {
-        Cachorro Juquinha = new Cachorro("Juquinha");
+        Cachorro Juquinha = new Cachorro("Juquinha", "Pastor alemão", "amarelo", 4, "au au");
         System.out.println(Juquinha);
-        Cachorro Joninhas = new Cachorro("Joninhas");
+        Cachorro Joninhas = new Cachorro("Joninhas", "Pinscher", "preto e marrom", 3, "grr grr");
         System.out.println(Joninhas);
-        Cachorro Lupita = new Cachorro("Lupita");
+        Cachorro Lupita = new Cachorro("Lupita", "Chow chow", "laranja", 5 ,"woof woof");
         System.out.println(Lupita);
         
     }
@@ -31,7 +31,12 @@ abstract class Animal {
 }
 
 class Cachorro extends Animal {
-    Cachorro(String nome) {
+    Cachorro(String nome, String raca, String cor, Integer idade, String onomatopeia) {
         this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+        this.onomatopeia = onomatopeia;
+
     }
 }
