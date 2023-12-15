@@ -2,27 +2,27 @@ public class Heranca00 {
     public static void main(String[] args) {
         System.out.println("Inicio!");
 
-        Cachorro cao1 = new Cachorro("Clovis", "Pastor", "Pretoooo", "26", "");
+        Cachorro cao1 = new Cachorro("Clovis", "Pastor", "Cinza", "26", "UAUAU");
         System.out.println(cao1);
-        cao1.fazBarulho();
+        //cao1.fazBarulho();
 
 
-        Cachorro cao2 = new Cachorro("Mandioca", "Pincher", "Pretoooo", "26", "");
+        Cachorro cao2 = new Cachorro("Mandioca", "Pincher", "Preto", "6", "UAUAU");
         System.out.println(cao2);
-        cao2.fazBarulho();
+        //cao2.fazBarulho();
 
-        Cachorro cao3= new Cachorro("Lupita", "Pittbul", "Marron", "26", "");
+        Cachorro cao3= new Cachorro("Lupita", "Pittbul", "Marron", "2", "UAUAU");
         System.out.println(cao3);
-        cao3.fazBarulho();
+        //cao3.fazBarulho();
 
        // fred.descrever();
 
-        /*
-         * Gato minerin = new Gato();
-         * minerin.fazBarulho();
-         * minerin.descrever();
-         * 
-         * CachorroP pumba = new CachorroP();
+    
+         Gato persa = new Gato("Ladron", "Persa", "Branco", "5", "MIAU");
+         System.out.println(persa);
+         
+
+        /* * CachorroP pumba = new CachorroP();
          * pumba.fazBarulho();
          * pumba.descrever();
          * 
@@ -76,6 +76,15 @@ class Cachorro extends Animal {
         this.cor = cor;
         this.idade = idade;
     }
+}
+    class Gato extends Animal {
+        Gato(String nome, String raca, String cor, String idade, String onomatopeia) {
+            this.nome = nome;
+            this.onomatopeia = onomatopeia;
+            this.raca = raca;
+            this.cor = cor;
+            this.idade = idade;
+        }
 }
 
 /*
