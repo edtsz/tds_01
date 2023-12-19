@@ -12,54 +12,10 @@ public class Heranca00 {
         System.out.println(ribamar);
         Gato gato = new Gato("Gato", "racaGato", "corGato", "onomatopeiaGato", 29);
         System.out.println(gato);
-        Cavalo wesley = new Cavalo("Wesley", "raca34", "cor43", "onomatopeia65", 32);
+        Cavalo wesley = new Cavalo("Wesley", "raca34", "cor43", "onomatopeia65", 45);
         System.out.println(wesley);
 
-        
     }
 }
 
-abstract class Animal {
 
-    String nome, onomatopeia, raca, cor;
-    Integer idade;
-
-    public String toString() {
-        return "\nNome: " + this.nome + "\n"
-                + "Raca: " + this.raca + "\n"
-                + "Cor: " + this.cor + "\n"
-                + "Idade: " + this.idade + "\n"
-                + "Som: " + this.onomatopeia + "\n";
-    }
-}
-
-class Cachorro extends Animal {
-
-    Cachorro(String nome, String raca, String cor, String onomatopeia, Integer idade) {
-        this.nome = nome;
-        this.raca = raca;
-        this.cor = cor;
-        this.idade = idade;
-        this.onomatopeia = onomatopeia;
-    }
-}
-class Gato extends Animal {
-
-    Gato(String nome, String raca, String cor, String onomatopeia, Integer idade) {
-        this.nome = nome;
-        this.raca = raca;
-        this.cor = cor;
-        this.idade = idade;
-        this.onomatopeia = onomatopeia;
-    }
-}
-class Cavalo extends Animal {
-
-    Cavalo(String nome, String raca, String cor, String onomatopeia, Integer idade) {
-        this.nome = nome;
-        this.raca = raca;
-        this.cor = cor;
-        this.idade = idade;
-        this.onomatopeia = onomatopeia;
-    }
-}
