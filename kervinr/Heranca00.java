@@ -2,16 +2,16 @@ public class Heranca00 {
     public static void main(String[] args) {
         System.out.println("Inicio!");
 
-        Cachorro cao1 = new Cachorro("Clovis", "Pastor", "Cinza", "26", "UAUAU");
+        Cachorro cao1 = new Cachorro("Clovis", "Pastor", "Cinza", "26",);
         System.out.println(cao1);
         //cao1.fazBarulho();
 
 
-        Cachorro cao2 = new Cachorro("Mandioca", "Pincher", "Preto", "6", "UAUAU");
+        Cachorro cao2 = new Cachorro("Mandioca", "Pincher", "Preto", "6",);
         System.out.println(cao2);
         //cao2.fazBarulho();
 
-        Cachorro cao3= new Cachorro("Lupita", "Pittbul", "Marron", "2", "UAUAU");
+        Cachorro cao3= new Cachorro("Lupita", "Pittbul", "Marron", "2",);
         System.out.println(cao3);
         //cao3.fazBarulho();
 
@@ -21,7 +21,7 @@ public class Heranca00 {
          Gato persa = new Gato("Ladron", "Persa", "Branco", "5", "MIAU");
          System.out.println(persa);
          
-         Caballo mustang = new Caballo("Cuatro", "Mustang", "BrancoePreto", "5", "SONIDODECABALLO");
+         Caballo mustang = new Caballo("Cuatro", "Mustang", "BrancoePreto", "5");
          System.out.println(mustang);
 
         /* * CachorroP pumba = new CachorroP();
@@ -71,7 +71,7 @@ abstract class Animal {
     }
 }
 class Cachorro extends Animal {
-    Cachorro(String nome, String raca, String cor, String idade, String onomatopeia) {
+    Cachorro(String nome, String raca, String cor, String idade,) {
         this.nome = nome;
         this.onomatopeia = onomatopeia;
         this.raca = raca;
@@ -80,7 +80,7 @@ class Cachorro extends Animal {
     }
 }
     class Gato extends Animal {
-        Gato(String nome, String raca, String cor, String idade, String onomatopeia) {
+        Gato(String nome, String raca, String cor, String idade,) {
             this.nome = nome;
             this.onomatopeia = onomatopeia;
             this.raca = raca;
@@ -90,7 +90,7 @@ class Cachorro extends Animal {
 }
 
     class Caballo extends Animal {
-            Caballo(String nome, String raca, String cor, String idade, String onomatopeia){
+            Caballo(String nome, String raca, String cor, String idade,){
                 this.nome = nome;
                 this.onomatopeia = onomatopeia;
                 this.raca = raca;
