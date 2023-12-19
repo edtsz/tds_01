@@ -4,10 +4,12 @@ public class Heranca00 {
         System.out.println(rufus);
         Cachorro astolfo = new Cachorro("astolfo", "au au", "Pastor-alemão", "marrom", 5);
         System.out.println(astolfo);
-        Cachorro doggus = new Cachorro("doggus", "au au", "husky", "white", 3);
+        Cachorro doggus = new Cachorro("doggus", "au au", "husky", "branco", 3);
         System.out.println(doggus);
-        Gato bortolomeu = new Gato("bartolomeu", "miau", "ragdoll", "white", 2);
+        Gato bortolomeu = new Gato("bartolomeu", "miau", "ragdoll", "branco", 2);
         System.out.println(bortolomeu);
+        Cavalo pegasus = new Cavalo("pegasus", "Hiin", "garanhão", "negro", 4);
+        System.out.println(pegasus);
     }
 
 }
@@ -46,6 +48,16 @@ class Cachorro extends Animal {
 
 class Gato extends Animal{
     public Gato(String nome, String onomatopeia, String raca, String cor, Integer idade) {
+        this.nome = nome;
+        this.onomatopeia = onomatopeia;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+    }
+}
+
+class Cavalo extends Animal{
+    public Cavalo(String nome, String onomatopeia, String raca, String cor, Integer idade) {
         this.nome = nome;
         this.onomatopeia = onomatopeia;
         this.raca = raca;
