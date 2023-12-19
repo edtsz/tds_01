@@ -16,6 +16,9 @@ public class Heranca00{
 
         Gato gato1 = new Gato("Cleideleia", "naosei", "amarelo", 5);
         System.out.println(gato1);
+
+        Cavalo pedepano = new Cavalo("Pé de Pano", "eu não sabo sobre raças de cavalo", "branco", 12);
+        System.out.println(pedepano);
     }
 }
 abstract class Animal {
@@ -27,29 +30,38 @@ abstract class Animal {
     
     public String toString () {
         return 
-        "Raça:" + this.raca + "\n" +
-        "Nome:" + this.nome + "\n" + 
-        "Cor:" + this.cor + "\n" +
-        "Idade:" + this.idade + "\n" +
-        "Som:" + this.onomatopeia + "\n";
+        "Raça:"     + this.raca         + "\n" +
+        "Nome:"     + this.nome         + "\n" + 
+        "Cor:"      + this.cor          + "\n" +
+        "Idade:"    + this.idade        + "\n" +
+        "Som:"      + this.onomatopeia  + "\n";
     }
 
 }
 class Cachorro extends Animal {
     Cachorro (String nome, String raca, String cor, Integer idade) {
-        this.nome = nome;
-        this.onomatopeia = "auauau";
-        this.cor = cor;
-        this.raca = raca;
-        this.idade = idade;
+        this.nome           = nome;
+        this.onomatopeia    = "auauau";
+        this.cor            = cor;
+        this.raca           = raca;
+        this.idade          = idade;
     }
 }
 class Gato extends Animal {
     Gato (String nome, String raca, String cor, Integer idade) {
-        this.nome = nome;
-        this.onomatopeia = "miau";
-        this.cor = cor;
-        this.raca = raca;
-        this.idade = idade;
+        this.nome           = nome;
+        this.onomatopeia    = "miau";
+        this.cor            = cor;
+        this.raca           = raca;
+        this.idade          = idade;
+    }
+}
+class Cavalo extends Animal {
+    Cavalo (String nome, String raca, String cor, Integer idade) {
+        this.nome           = nome;
+        this.onomatopeia    = "**relinchos audazes**";
+        this.cor            = cor;
+        this.raca           = raca;
+        this.idade  	    = idade;
     }
 }
