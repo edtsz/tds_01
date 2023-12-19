@@ -21,6 +21,8 @@ public class Heranca00 {
          Gato persa = new Gato("Ladron", "Persa", "Branco", "5", "MIAU");
          System.out.println(persa);
          
+         Caballo mustang = new Caballo("Cuatro", "Mustang", "BrancoePreto", "5", "SONIDODECABALLO");
+         System.out.println(mustang);
 
         /* * CachorroP pumba = new CachorroP();
          * pumba.fazBarulho();
@@ -87,6 +89,16 @@ class Cachorro extends Animal {
         }
 }
 
+    class Caballo extends Animal {
+            Caballo(String nome, String raca, String cor, String idade, String onomatopeia){
+                this.nome = nome;
+                this.onomatopeia = onomatopeia;
+                this.raca = raca;
+                this.cor = cor;
+                this.idade = idade;
+            }
+
+    }
 /*
  * class Gato extends Animal {
  * public Gato() {
