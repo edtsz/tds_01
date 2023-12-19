@@ -10,7 +10,12 @@ public class Heranca00 {
 
         Cachorro ribamar = new Cachorro("Ribamar", "raça77", "cor77", "onomatopeia88", 88);
         System.out.println(ribamar);
+        Gato gato = new Gato("Gato", "racaGato", "corGato", "onomatopeiaGato", 29);
+        System.out.println(gato);
+        Cavalo wesley = new Cavalo("Wesley", "raca34", "cor43", "onomatopeia65", 32);
+        System.out.println(wesley);
 
+        
     }
 }
 
@@ -31,6 +36,26 @@ abstract class Animal {
 class Cachorro extends Animal {
 
     Cachorro(String nome, String raca, String cor, String onomatopeia, Integer idade) {
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+        this.onomatopeia = onomatopeia;
+    }
+}
+class Gato extends Animal {
+
+    Gato(String nome, String raca, String cor, String onomatopeia, Integer idade) {
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+        this.onomatopeia = onomatopeia;
+    }
+}
+class Cavalo extends Animal {
+
+    Cavalo(String nome, String raca, String cor, String onomatopeia, Integer idade) {
         this.nome = nome;
         this.raca = raca;
         this.cor = cor;
