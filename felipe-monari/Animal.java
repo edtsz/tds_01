@@ -1,4 +1,3 @@
-
 abstract class Animal {
 
     String nome, onomatopeia, raca, cor;
