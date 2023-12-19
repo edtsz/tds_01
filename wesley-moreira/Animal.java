@@ -8,7 +8,7 @@ abstract class Animal {
     public void fazBarulho() {
         System.out.println(this.onomatopeia);
     }
-     public String toString (){
+    public String toString (){
     return  "Nome: "+ this.nome + "\n" +
             "Raça: "+ this.raca + "\n" +
             "Cor: "+ this.cor + "\n" +
