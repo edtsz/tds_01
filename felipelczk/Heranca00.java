@@ -8,6 +8,8 @@ public class Heranca00 {
         System.out.println(Lupita);
         Gato Leia = new Gato("Léia", "Siames", "branco", 6, "miau miau");
         System.out.println(Leia);
+        Cavalo Rodolfo = new Cavalo("Rodolfo", "Paint Horse", "pintado", 8, "relinxe");
+        System.out.println(Rodolfo);
     }
 
 }
@@ -43,6 +45,16 @@ class Cachorro extends Animal {
 
 class Gato extends Animal {
     Gato(String nome, String raca, String cor, Integer idade, String onomatopeia) {
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+        this.onomatopeia = onomatopeia;
+    }
+}
+
+class Cavalo extends Animal {
+    Cavalo(String nome, String raca, String cor, Integer idade, String onomatopeia) {
         this.nome = nome;
         this.raca = raca;
         this.cor = cor;
