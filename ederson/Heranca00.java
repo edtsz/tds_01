@@ -11,5 +11,15 @@ public class Heranca00 {
         System.out.println(_g1);
  
         System.out.println("=================================");
+
+        Animal _h1 = new Cavalo("Cavalo 1", "Marrom", "Puro sangue", 3);
+        System.out.println(_h1);
+ 
+        System.out.println("=================================");
+ 
+        Animal _h2 = new Cavalo("Cavalo 2", "Vermelho", "Crioulo", 6);
+        System.out.println(_h2);
+ 
+        System.out.println("=================================");
     }
 }
