@@ -39,7 +39,7 @@ public class Heranca00 {
 
 abstract class Animal {
     String nome;
-    String onomatopeia; 
+    String onomatopeia;
     String idade;
     String raca;
     String cor;
@@ -70,6 +70,7 @@ abstract class Animal {
 
     }
 }
+
 class Cachorro extends Animal {
     Cachorro(String nome, String raca, String cor, String idade,) {
         this.nome = nome;
@@ -79,6 +80,7 @@ class Cachorro extends Animal {
         this.idade = idade;
     }
 }
+
     class Gato extends Animal {
         Gato(String nome, String raca, String cor, String idade,) {
             this.nome = nome;
@@ -89,7 +91,7 @@ class Cachorro extends Animal {
         }
 }
 
-    class Caballo extends Animal {
+        class Caballo extends Animal {
             Caballo(String nome, String raca, String cor, String idade,){
                 this.nome = nome;
                 this.onomatopeia = onomatopeia;
