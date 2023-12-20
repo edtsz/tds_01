@@ -11,9 +11,7 @@ public class Leitura00 {
     System.out.println ("Digite a idade do cão: ");
     int idade = c.nextInt();
     
-    System.out.println ("Nome do cão " + nome);  
-    System.out.println ("Raça do cão: " + raca);
-    System.out.println ("Cor do cão: " + cor);
-    System.out.println ("Idade do cão: " + idade);
+    Cachorro dog = new Cachorro (nome, raca, cor, idade);
+    System.out.println (dog);
   } 
 }
