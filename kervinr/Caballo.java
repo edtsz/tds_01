@@ -1,5 +1,5 @@
 class Caballo extends Animal {
-    Caballo(String nome, String raca, String cor, String idade, String onomatopeia){
+    Caballo(String nome, String raca, String cor, String idade){
         this.nome = nome;
         this.raca = raca;
         this.cor = cor;

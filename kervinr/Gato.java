@@ -1,5 +1,5 @@
 class Gato extends Animal {
-    Gato(String nome, String raca, String cor, String idade, String onomatopeia) {
+    Gato(String nome, String raca, String cor, String idade) {
         this.nome = nome;
         this.raca = raca;
         this.cor = cor;

@@ -22,7 +22,7 @@ public class Heranca00 {
          
          System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
-         Caballo mustang = new Caballo("Toreto", "Mustang", "BrancoePreto", "5", "SONIDODECABALLO");
+         Caballo mustang = new Caballo("Toreto", "Mustang", "BrancoePreto", "5", "BRRRRUUU");
          System.out.println(mustang);
 
     }
