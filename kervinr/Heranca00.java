@@ -12,18 +12,18 @@ public class Heranca00 {
 
         System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
-        Cachorro cao3= new Cachorro("Lupita", "Pittbul", "Marron", "2");
+        Cachorro cao3 = new Cachorro("Lupita", "Pittbul", "Marron", "2");
         System.out.println(cao3);
 
         System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
-         Gato persa = new Gato("Ladron", "Persa", "Branco", "5");
-         System.out.println(persa);
-         
-         System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        Gato persa = new Gato("Ladron", "Persa", "Branco", "5");
+        System.out.println(persa);
 
-         Caballo mustang = new Caballo("Toreto", "Mustang", "BrancoePreto", "5");
-         System.out.println(mustang);
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+
+        Caballo mustang = new Caballo("Toreto", "Mustang", "BrancoePreto", "5");
+        System.out.println(mustang);
 
     }
 
