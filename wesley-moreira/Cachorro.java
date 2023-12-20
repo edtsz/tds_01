@@ -1,5 +1,5 @@
 class Cachorro extends Animal {
-    Cachorro (String nome,  String raca,  String cor, Integer idade ){
+    Cachorro (String nome, String raca, String cor, Integer idade) {
         this.nome = nome;
         this.raca = raca;
         this.onomatopeia = "auau";
