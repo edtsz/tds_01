@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class Leitura00 {
-
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite o nome: ");
@@ -12,11 +11,8 @@ public class Leitura00 {
         System.out.println("Digite a idade: ");
         int idade = scan.nextInt();
 
-        ClasseLeitura c = new ClasseLeitura();
-        c.setNome(nome);
-        c.setRaca(raca);
-        c.setCor(cor);
-        c.setIdade(idade);
-        c.imprimeObjeto();
+        Cachorro c = new Cachorro(nome, raca, cor, idade);
+        System.out.println(c);
+
     }
 }
