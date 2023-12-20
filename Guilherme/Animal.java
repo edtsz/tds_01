@@ -6,11 +6,11 @@ abstract class Animal {
     Integer idade;
 
     public String toString () {
-    return 
-        "Raça  :"       + this.raca         + "\n" +
-        "Nome  :"       + this.nome         + "\n" + 
-        "Cor   :"       + this.cor          + "\n" +
-        "Idade :"       + this.idade        + "\n" +
-        "Som   :"       + this.onomatopeia  + "\n";
-}
+        return
+            "Raça  :"       + this.raca         + "\n" +
+            "Nome  :"       + this.nome         + "\n" + 
+            "Cor   :"       + this.cor          + "\n" +
+            "Idade :"       + this.idade        + "\n" +
+            "Som   :"       + this.onomatopeia  + "\n";
+    }
 }
