@@ -4,6 +4,6 @@ class Gato extends Animal {
         this.raca = raca;
         this.cor = cor;
         this.idade = idade;
-        this.onomatopeia = onomatopeia;
+        this.onomatopeia = "MIAU";
     }
 }

@@ -4,7 +4,7 @@ class Caballo extends Animal {
         this.raca = raca;
         this.cor = cor;
         this.idade = idade;
-        this.onomatopeia = onomatopeia;
+        this.onomatopeia = "BRRRRUUU";
     }
 
 }
