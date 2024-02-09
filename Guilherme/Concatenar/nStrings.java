@@ -1,13 +1,15 @@
-import java.util.Arrays;
-
 public class nStrings{
 
     public static void main (String [] args ){
-       Integer letraPos = Integer.parseInt(args[0]);
-       String a = args [1];
-       System.out.println(" - " + ( a.charAt(letraPos - 1)));
-       /*não terminado */
+        for(int contador = 0 ; contador < args.length ; contador++){
+            System.out.print(args[contador]);
+        
+        if ( contador < args.length - 1){
+            System.out.print(" - ");
+        }
+        else if ( contador < args.length + 1) {
+            System.out.println(" ");
+        }
+        }
     }
-
-
 }
