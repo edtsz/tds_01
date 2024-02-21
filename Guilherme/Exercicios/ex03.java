@@ -1,12 +1,11 @@
 public class ex03 {
 
     public static void main (String [] args) {
-        String text = "alguma coisa";
-
-        for (int i = text.length() - 1; i >= 0 i-- ) {
-            System.out.println(texto.charAt(i));
-
-        }
+        int inv = args.length;
+        
+        for(int contador = inv - 1; contador >=0; contador--) {
+            System.out.println(args[contador]);
+        }   
     }
 }
 /*não terminado
