@@ -1,3 +1,4 @@
+/*primeira letra Maiúscula, o resto que se exploda*/
 public class ex07 {
 
     public static void main (String [] args ) {
@@ -8,7 +9,7 @@ public class ex07 {
             String restcar = args[i].substring(1).toLowerCase();
             String frase = primcar + restcar;
 
-            System.out.println(frase);
+            System.out.print(frase + " ");
         }
     }
 }

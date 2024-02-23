@@ -1,3 +1,4 @@
+/*exercício que coloca as palavras ao contrário, não vou explicar, compila o código que tu vai ver, joia*/
 public class ex03 {
 
     public static void main (String [] args) {

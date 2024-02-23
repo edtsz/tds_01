@@ -1,3 +1,4 @@
+/*esse aqui mostra o tamanho do que tu digitar no teminal, beleza?*/
 public class ex02 {
 
     public static void main (String [] args )
