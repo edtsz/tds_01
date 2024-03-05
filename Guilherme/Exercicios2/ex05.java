@@ -3,22 +3,14 @@ public class ex05 {
 
     public static void main (String [] args) {
 
-            int n = Integer.parseInt(n.getValue().toString());
-            int f = 1;
-            int c = n;
-            String s = "";
+        int n = Integer.parseInt(args[0]);
+        double resultado = 1;
 
-            while (c >= 1) {
+        for ( int i = 1 ; i <= n ; i++) {
 
-                f *= c;
-                if( c == 1) {
-                    s += c ;
-                }
-                else if (c > 1) {
-                    s += c + " x ";
-                }
-                c--;
-            }  
-            lblFat.setText(s + " = " + Integer.toString(f));
-        }        
-    }
+            resultado *= i;
+        }
+        System.out.println(resultado);
+           
+    }  
+}        
