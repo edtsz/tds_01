@@ -1,30 +1,34 @@
-import java.util.Scanner;
 public class calculadora {
 
     public static void main (String [] args) {
 
-        int soma , sub , multi ;
-        double div;
         double n1 = Double.parseDouble(args[0]);
         double n2 = Double.parseDouble(args[2]);
-        String ops = "";
+        double soma = n1 + n2; 
+        double sub = n1 - n2;
+        double mult = n1 * n2;
+        double div = n1 / n2;
+        String ops = args[1];
 
-        Scanner scan = new Scanner (System.in);
         System.out.println("Bem-vindo. Vamos fazer umas conta aí");
-        ops = scan.nextLine();
 
-        if (ops.equals(" + ")) {
-            System.out.println("O resultado é: " + (n1 + n2));
+        switch (ops) {
+
+            case "+" :
+                System.out.println("O resultado é: " + soma);
+            break;
+
+            case "-" :
+                System.out.println("O resultado é: " + sub);
+            break;
+
+            case "x" :
+                System.out.println("O resultado é: " + mult);
+            break;
+
+            case "/" :
+                System.out.println("O resultado é: " + div);
+            break;
         }
-        else if (ops.equals(" - ")) {
-            System.out.println("O resultado é: " + (n1 - n2));
-        }
-        else if (ops.equals(" x ")){
-            System.out.println("O resultado é: " + (n1 * n2));
-        }
-        else if (ops.equals(" / ")) {
-            System.out.println("O resultado é: " + (n1 / n2));
-        }
-        
    }
 }

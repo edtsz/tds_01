@@ -12,7 +12,7 @@ public class calc2 {
             res = soma(n1, n2);
         }
         else if (ops.equals("-")) {
-            res = 
+            res = sub
         }
         else {
             System.err.println("Erro.");
