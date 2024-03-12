@@ -35,6 +35,10 @@ public class calcFunc {
             case "raiz" :
                 res = calc.raiz();
                 break;
+            
+            case "fat" :
+                res = calc.fat();
+                break;
 
             default :
                 System.err.println("Operação inválida.");
@@ -47,6 +51,7 @@ public class calcFunc {
 
 class Calcular {
 
+    private double res = 1 ;
     private double n1;
     private double n2;
 
@@ -78,5 +83,13 @@ class Calcular {
     public double raiz() {
 
         return Math.sqrt(this.n1) ;
+    }
+    public double fat() {
+
+        for (int i = 1 ; i <= n1; i++ ) {
+
+            res = res * i ;
+        }
+        return res ;
     }
 }
