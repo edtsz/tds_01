@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class pitssaria {
 
-    public static void main ( String [] args) {
+    public void main ( String [] args) {
 
         System.out.println("Bem vindo à pitssaria: ");
 
@@ -20,18 +20,13 @@ public class pitssaria {
         System.out.println("Diza o valor: ");
         item.setValor(scan.nextDouble());
 
+        ped.adicionarItemDoPedido(item);
+
         System.out.println("Nome do cliente: ");
-        pedidos.setCliente(scan.next());
+        ped.setCliente(scan.nextLine());
 
         System.out.println("Taxa de entrega: ");
-        pedidos.settx_entrega(scan.nextDouble());
-        
-        pedidos.adicionarItemDoPedido(item);
-        pedido.imprimir();
-        System.out.println("");
-        System.out.println("Cliente: " + this.cliente);
-        System.out.println("Taxa de Entrega: " + this.tx_entrega);
-        System.out.println("Total: " + this.total);
+        ped.setTx_entrega(scan.nextDouble());
         
     }
 }
