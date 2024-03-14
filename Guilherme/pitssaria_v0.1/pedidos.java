@@ -1,21 +1,40 @@
-import java.util.ArrayList;
-
 public class pedidos {
 
     private double total;
     private int ID;
-    private double Tx_entrega;
-    private ArrayList<ItemDoPedido> ItemDoPedido = new ArrayList<>();
-    private String Cliente;
+    private double taxaEntrega;
+    private ItemDoPedido itemDoPedido;
+    private String cliente;
 
     public void adicionarItemDoPedido(ItemDoPedido item) {
+        this.itemDoPedido = item;
+    }
+    public void setCliente(String nome) {
+        this.cliente = nome;
+    }
+    public void setTaxaEntrega(double taxaEntrega) {
+        this.taxaEntrega = taxaEntrega;
+    }
 
-        this.ItemDoPedido.add(item);
+    public double getTotal() {
+
+        return total = this.taxaEntrega + this.itemDoPedido.getValor();
+     
     }
-    public void setCliente(String cliente) {
-        this.Cliente = Cliente;
-    }
-    public void settx_entrega(double tx_entrega) {
-        this.Tx_entrega = Tx_entrega;
+
+    public void imprimir() {
+        System.out.println("_____________________________");
+        System.out.println("Pitssaria Que Vende Ptissaç: ");
+        System.out.println("_____________________________");
+        System.out.println("Cliente: " + this.cliente);
+        System.out.println("_____________________________");
+        System.out.println("Sabor: " + this.itemDoPedido.getSabor());
+        System.out.println("Tipo: " + this.itemDoPedido.getTipo());
+        System.out.println("Valor: " + this.itemDoPedido.getValor());
+        System.out.println("_____________________________");
+        System.out.println("Taxa de Entrega: " + this.taxaEntrega);
+        System.out.println("_____________________________");
+        System.out.println("Total: " + this.getTotal());
+        System.out.println("_____________________________");
     }
 }
