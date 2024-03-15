@@ -29,7 +29,7 @@ public class pedidos {
         System.out.println("Cliente: " + this.cliente);
         System.out.println("_____________________________");
         System.out.println("Sabor: " + this.itemDoPedido.getSabor());
-        System.out.println("Tipo: " + this.itemDoPedido.getTipo());
+        System.out.println("Tipo:  " + this.itemDoPedido.getTipo());
         System.out.println("Valor: " + this.itemDoPedido.getValor());
         System.out.println("_____________________________");
         System.out.println("Taxa de Entrega: " + this.taxaEntrega);
