@@ -24,6 +24,12 @@ public class ItemDoPedido {
     }
 
     public double getValor() {
-        return this.valor;
+        if (this.getTipo().equalsIgnoreCase("tradicional")) {
+            return 40.0;
+        }
+        else {
+            return 50.0;
+        }
     }
+
 }

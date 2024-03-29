@@ -14,10 +14,10 @@ public class pitssaria {
             ItemDoPedido item = new ItemDoPedido();
 
             System.out.println("Fala o tipo da pitssa que tu qer: ");
-            item.setTipo(scan.nextLine());
+            item.setTipo(scan.nextLine().trim());
 
             System.out.println("Me diza o çabor da pitssa: ");
-            item.setSabor(scan.nextLine());
+            item.setSabor(scan.nextLine().trim());
 
             System.out.println("Diza o valor: ");
             item.setValor(scan.nextDouble());
@@ -26,12 +26,12 @@ public class pitssaria {
             pedidos.adicionarItemDoPedido(item);
 
             System.out.println("Maiç aoguma coiza?");
-            continuar = scan.nextLine();
+            continuar = scan.nextLine().trim();
 
-        } while (continuar.equalsIgnoreCase("y"));
+        } while (continuar.equalsIgnoreCase("sim"));
 
         System.out.println("Nome do cliente: ");
-        pedidos.setCliente(scan.next());
+        pedidos.setCliente(scan.next().trim());
 
         System.out.println("Taxa de entrega: ");
         pedidos.setTaxaEntrega(scan.nextDouble());

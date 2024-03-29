@@ -1,25 +1,32 @@
+import java.util.ArrayList;
+
 public class pedidos {
 
     private double total;
     private int ID;
-    private double taxaEntrega;
-    private ItemDoPedido itemDoPedido;
+    private double TaxaEntrega;
+    private ArrayList<ItemDoPedido> itemDoPedido = new ArrayList<ItemDoPedido>();
     private String cliente;
 
     public void adicionarItemDoPedido(ItemDoPedido item) {
-        this.itemDoPedido = item;
+        this.itemDoPedido.add(item);
     }
     public void setCliente(String nome) {
         this.cliente = nome;
     }
-    public void setTaxaEntrega(double taxaEntrega) {
-        this.taxaEntrega = taxaEntrega;
+    public void setTaxaEntrega(double TaxaEntrega) {
+        this.TaxaEntrega = TaxaEntrega;
+    }
+    public double getTaxaEntrega() {
+        this.TaxaEntrega = TaxaEntrega;
     }
 
     public double getTotal() {
-
-        return total = this.taxaEntrega + this.itemDoPedido.getValor();
-     
+        Double total = this.getTaxaEntrega();
+        for ( int i=0; i < this.itemDoPedido.size(); i++) {
+            total += this.itemDoPedido.getValor();
+        } 
+        return total;
     }
 
     public void imprimir() {
@@ -28,11 +35,16 @@ public class pedidos {
         System.out.println("_____________________________");
         System.out.println("Cliente: " + this.cliente);
         System.out.println("_____________________________");
-        System.out.println("Sabor: " + this.itemDoPedido.getSabor());
-        System.out.println("Tipo:  " + this.itemDoPedido.getTipo());
-        System.out.println("Valor: " + this.itemDoPedido.getValor());
+        for ( int i=0; i < this.itemDoPedido.size(); i++) {
+            if (i>0) {
+                System.out.println();
+            }
+            System.out.println("Sabor: " + this.itemDoPedido.get(i).getSabor());
+            System.out.println("Tipo:  " + this.itemDoPedido.get(i).getTipo());
+            System.out.println("Valor: " + this.itemDoPedido.get(i).getValor());
+        }
         System.out.println("_____________________________");
-        System.out.println("Taxa de Entrega: " + this.taxaEntrega);
+        System.out.println("Taxa de Entrega: " + this.getTaxaEntrega());
         System.out.println("_____________________________");
         System.out.println("Total: " + this.getTotal());
         System.out.println("_____________________________");
