@@ -4,7 +4,7 @@ public class pedidos {
 
     private double total;
     private int ID;
-    private double TaxaEntrega;
+    private double taxaEntrega;
     private ArrayList<ItemDoPedido> itemDoPedido = new ArrayList<ItemDoPedido>();
     private String cliente;
 
@@ -14,17 +14,27 @@ public class pedidos {
     public void setCliente(String nome) {
         this.cliente = nome;
     }
-    public void setTaxaEntrega(double TaxaEntrega) {
-        this.TaxaEntrega = TaxaEntrega;
+    public void setLocalEntrega(String taxaEntrega) {
+        if(equalsIgnoreCase("Centro")) {
+            taxaEntrega = 10.0;
+        }
+        else if (equalsIgnoreCase("Periferia")) {
+            taxaEntrega = 15.0;
+        }
+        else if (equalsIgnoreCase("Outro")) {
+            taxaEntrega = 20.0;
+        }
     }
+
+
     public double getTaxaEntrega() {
-        this.TaxaEntrega = TaxaEntrega;
+        return this.taxaEntrega;
     }
 
     public double getTotal() {
-        Double total = this.getTaxaEntrega();
+        Double total = this.getLocalEntrega();
         for ( int i=0; i < this.itemDoPedido.size(); i++) {
-            total += this.itemDoPedido.getValor();
+            total += this.itemDoPedido.get(i).getValor();
         } 
         return total;
     }
@@ -44,6 +54,7 @@ public class pedidos {
             System.out.println("Valor: " + this.itemDoPedido.get(i).getValor());
         }
         System.out.println("_____________________________");
+         System.out.println("Local: " + this.get);
         System.out.println("Taxa de Entrega: " + this.getTaxaEntrega());
         System.out.println("_____________________________");
         System.out.println("Total: " + this.getTotal());

@@ -19,10 +19,6 @@ public class pitssaria {
             System.out.println("Me diza o çabor da pitssa: ");
             item.setSabor(scan.nextLine().trim());
 
-            System.out.println("Diza o valor: ");
-            item.setValor(scan.nextDouble());
-            scan.nextLine();
-
             pedidos.adicionarItemDoPedido(item);
 
             System.out.println("Maiç aoguma coiza?");
@@ -33,8 +29,8 @@ public class pitssaria {
         System.out.println("Nome do cliente: ");
         pedidos.setCliente(scan.next().trim());
 
-        System.out.println("Taxa de entrega: ");
-        pedidos.setTaxaEntrega(scan.nextDouble());
+        System.out.println("Onde tu moras xoven?");
+        pedidos.setLocalEntrega(scan.nextLine().trim());
 
         pedidos.imprimir();
         
