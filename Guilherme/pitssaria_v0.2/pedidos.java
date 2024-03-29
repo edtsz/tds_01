@@ -5,6 +5,7 @@ public class pedidos {
     private double total;
     private int ID;
     private double taxaEntrega;
+    private String localEntrega = "";
     private ArrayList<ItemDoPedido> itemDoPedido = new ArrayList<ItemDoPedido>();
     private String cliente;
 
@@ -15,17 +16,16 @@ public class pedidos {
         this.cliente = nome;
     }
     public void setLocalEntrega(String taxaEntrega) {
-        if(equalsIgnoreCase("Centro")) {
-            taxaEntrega = 10.0;
+        if(localEntrega.equalsIgnoreCase("Centro")) {
+            return 10;
         }
-        else if (equalsIgnoreCase("Periferia")) {
-            taxaEntrega = 15.0;
+        else if (localEntrega.equalsIgnoreCase("Periferia")) {
+            return 15;
         }
-        else if (equalsIgnoreCase("Outro")) {
-            taxaEntrega = 20.0;
+        else if (localEntrega.equalsIgnoreCase("Outro")) {
+            return 20;
         }
     }
-
 
     public double getTaxaEntrega() {
         return this.taxaEntrega;
@@ -54,7 +54,7 @@ public class pedidos {
             System.out.println("Valor: " + this.itemDoPedido.get(i).getValor());
         }
         System.out.println("_____________________________");
-         System.out.println("Local: " + this.get);
+         System.out.println("Local: " + this.setLocalEntrega());
         System.out.println("Taxa de Entrega: " + this.getTaxaEntrega());
         System.out.println("_____________________________");
         System.out.println("Total: " + this.getTotal());
