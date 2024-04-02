@@ -27,7 +27,7 @@ public class pitssaria {
         } while (continuar.equalsIgnoreCase("sim"));
 
         System.out.println("Nome do cliente: ");
-        pedidos.setCliente(scan.next().trim());
+        pedidos.setCliente(scan.nextLine().trim());
 
         System.out.println("Onde tu moras xoven?");
         pedidos.setLocalEntrega(scan.nextLine().trim());

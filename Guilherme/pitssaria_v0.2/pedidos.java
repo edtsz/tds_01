@@ -30,9 +30,7 @@ public class pedidos {
         else if (localEntrega.equalsIgnoreCase("Periferia")) {
             return 15.0;
         }
-        else if (localEntrega.equalsIgnoreCase("Outro")) {
-            return 20.0;
-        }
+        return 20.0;
     }
 
     public double getTotal() {
