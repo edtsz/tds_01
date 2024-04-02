@@ -39,12 +39,11 @@ public class Pedido {
 
         if (local.equalsIgnoreCase("centro")) {
             return 10.0;
-        } else
+        }
         if(local.equalsIgnoreCase("bairro")) {
             return 15.0;
-        } else {
-            return 20.0;
         }
+        return 20.0;
     }
 
     public void imprimir() {
