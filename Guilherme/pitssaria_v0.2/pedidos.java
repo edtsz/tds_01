@@ -15,24 +15,28 @@ public class pedidos {
     public void setCliente(String nome) {
         this.cliente = nome;
     }
-    public void setLocalEntrega(String taxaEntrega) {
-        if(localEntrega.equalsIgnoreCase("Centro")) {
-            return 10;
-        }
-        else if (localEntrega.equalsIgnoreCase("Periferia")) {
-            return 15;
-        }
-        else if (localEntrega.equalsIgnoreCase("Outro")) {
-            return 20;
-        }
+
+    public void setLocalEntrega(String local) {
+        this.localEntrega = local;
+    }
+    public String getLocalEntrega() {
+        return this.localEntrega;
     }
 
     public double getTaxaEntrega() {
-        return this.taxaEntrega;
+        if(localEntrega.equalsIgnoreCase("Centro")) {
+            return 10.0;
+        }
+        else if (localEntrega.equalsIgnoreCase("Periferia")) {
+            return 15.0;
+        }
+        else if (localEntrega.equalsIgnoreCase("Outro")) {
+            return 20.0;
+        }
     }
 
     public double getTotal() {
-        Double total = this.getLocalEntrega();
+        Double total = this.getTaxaEntrega();
         for ( int i=0; i < this.itemDoPedido.size(); i++) {
             total += this.itemDoPedido.get(i).getValor();
         } 
@@ -54,7 +58,7 @@ public class pedidos {
             System.out.println("Valor: " + this.itemDoPedido.get(i).getValor());
         }
         System.out.println("_____________________________");
-         System.out.println("Local: " + this.setLocalEntrega());
+        System.out.println("Local: " + this.getLocalEntrega());
         System.out.println("Taxa de Entrega: " + this.getTaxaEntrega());
         System.out.println("_____________________________");
         System.out.println("Total: " + this.getTotal());
