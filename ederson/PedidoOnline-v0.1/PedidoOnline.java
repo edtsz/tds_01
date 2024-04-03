@@ -1,6 +1,7 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class PedidoOnline {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -12,9 +13,18 @@ public class Main {
             System.out.print("Produto: ");
             produto.setNome(scan.nextLine());
 
-            System.out.print("Preço: ");
-            produto.setPreco(scan.nextDouble());
-            scan.nextLine();
+            Boolean digitouErrado;
+            do {
+                try {
+                    System.out.print("Preço: ");
+                    produto.setPreco(scan.nextDouble());
+                    digitouErrado = false;
+                } catch(InputMismatchException e) {
+                    digitouErrado = true;
+                    System.err.println("DIGITOU ERRADO");
+                }
+                scan.nextLine();
+            } while (digitouErrado);
 
             System.out.print("Descrição: ");
             produto.setDescricao(scan.nextLine());
