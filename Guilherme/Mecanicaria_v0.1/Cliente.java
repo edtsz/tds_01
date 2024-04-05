@@ -1,35 +1,31 @@
 public class Cliente {
+    private String nome;
+    private String cpf;
+    private String contato;
+    private String endereco;
 
-    private string nome;
-    private string endereco; 
-    private string cpf;
-    private string telefone;
-
+    public String getNome() {
+        return this.nome;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public string getNome() {
-        return nome;
+    public String getCpf() {
+        return this.cpf;
     }
-
-    public void setEndereco(String nome) {
-        this.endereco = endereco;
-    }
-    public string getEndereco() {
-        return endereco;
-    }
-
-    public void setCPF(String cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    public string getCPF() {
-        return cpf;
+    public String getContato() {
+        return this.contato;
     }
-
-    public void setContato(String telefone) {
-        this.telefone = telefone;
+    public void setContato(String contato) {
+        this.contato = contato;
     }
-    public string getContato() {
-        return telefone;
+    public String getEndereco() {
+        return this.endereco;
     }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }    
 }

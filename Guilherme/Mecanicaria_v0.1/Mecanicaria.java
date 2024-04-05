@@ -12,25 +12,51 @@ public class Mecanicaria {
         System.out.println("Aoba meu fi, bem vindo a mecanicaria do Tião");
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Fala teu nome chapa: ");
+        System.out.println("Qual o seu nome?");
         cliente.setNome(scan.nextLine().trim());
 
-        System.out.println("Teu endereço: ");
+        System.out.println("Digite seu endereço:");
         cliente.setEndereco(scan.nextLine().trim());
 
-        System.out.println("CPF??????????????????");
-        cliente.setCPF(scan.nextLine().trim());
+        System.out.println("Informe o CPF:");
+        cliente.setCpf(scan.nextLine().trim());
 
-        System.out.println("passa o telefone ai ");
+        System.out.println("Diga-me o seu telefone:");
         cliente.setContato(scan.nextLine().trim());
 
-        System.out.println("Vamo pro qe enteressa, teu veiculo altamente exposivo com altas dozes de radiação sendo liberadas. Me descreva: ");
-        veiculo.setDescVeiculo(scan.nextLine().trim());
+        ordem.setCliente(cliente);
 
-        System.out.println("Que placa é?");
+        System.out.println("Qual a marca do carro?");
+        veiculo.setMarca(scan.nextLine());
+
+        System.out.println("E qual o nome do veículo?");
+        veiculo.setNomeVeiculo(scan.nextLine());
+
+        System.out.println("Me descreva o problema:");
+        veiculo.setDescricao(scan.nextLine().trim());
+
+        System.out.println("Qual a placa?");
         veiculo.setPlaca(scan.nextLine().trim());
 
-        System.out.println("Em que ano situa-se a fabricação de vosso calhambeque?");
+        System.out.println("Em que ano foi fabricado?");
         veiculo.setAno(scan.nextInt());
+
+        ordem.setVeiculo(veiculo);
+
+        System.out.println("Quais problemas o mecânico encontrou?");
+        servico.setProblemasMec(scan.nextLine());
+
+        System.out.println("Quanto tempo você espera que o carro esteja pronto?");
+        servico.setTempoCLi(scan.nextDouble());
+
+        System.out.println("Quanto tempo demorou para receber o veículo pronto?");
+        servico.setTempoMec(scan.nextDouble());
+
+        ordem.setServico(servico);
+
+        ordem.imprimir();
     }
+
+    
+    
 }

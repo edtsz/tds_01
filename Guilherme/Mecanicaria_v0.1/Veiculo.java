@@ -1,27 +1,42 @@
 public class Veiculo {
-
-    private string descricao;
-    private string placa;
+    private String descricao;
+    private String marca;
+    private String nomeVeiculo;
+    private String placa;
     private int ano;
 
-    public void setDescVeiculo(String descricao) {
+    public String getDescricao() {
+        return this.descricao;
+    }
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public string getDescVeiculo() {
-        return descricao;
+
+    public String getMarca() {
+        return this.marca;
+    }
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
+    public String getNomeVeiculo() {
+        return this.nomeVeiculo;
+    }
+    public void setNomeVeiculo(String nomeVeiculo) {
+        this.nomeVeiculo = nomeVeiculo;
+    }
+
+    public String getPlaca() {
+        return this.placa;
+    }
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-    public string getPlaca() {
-        return placa;
-    }
 
-    public void setAno(int ano) {
-        this.ano = ano;
+    public Integer getAno() {
+        return this.ano;
     }
-    public int getAno() {
-        return ano;
+    public void setAno(Integer ano) {
+        this.ano = ano;
     }
 }
