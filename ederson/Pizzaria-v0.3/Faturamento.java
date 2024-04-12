@@ -7,6 +7,7 @@ public class Faturamento {
     private ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
 
     public void addPedido(Pedido pedido) {
+        pedido.setId(this.pedidos.size() + 1);
         this.pedidos.add(pedido);
         this.addTotalGeral(pedido.getTotal());
         this.addTotalMotoboy(pedido.getTaxaEntrega());
@@ -36,14 +37,17 @@ public class Faturamento {
         return this.getTotalGeral() - this.getTotalMotoboy();
     }
 
+    public void imprimirPedido(Integer pedido_id) {
+        this.imprimirCabecalho();
+        this.pedidos.get(--pedido_id).imprimir();
+        System.out.println("--------------------------------------------");
+    }
+
     public void imprimirRelatorio() {
-        System.out.println("--------------------------------------------");
-        System.out.println("                  PIZZARIA                  ");
-        System.out.println("                 QuasePronto                ");
-        System.out.println("--------------------------------------------");
+        this.imprimirCabecalho();
         for(int i = 0; i < this.pedidos.size(); i++) {
             if (i > 0) {
-                System.out.printf("- %42s\n","-");
+                System.out.println();
             }
             this.pedidos.get(i).imprimir();
         }
@@ -55,6 +59,12 @@ public class Faturamento {
         System.out.printf("%-33s :  %7.2f\n", "Pagar ao motoboy", this.getTotalMotoboy());
         System.out.printf("%-33s :  %7.2f\n", "Total líquido", this.getTotalLiquido());
         System.out.println("--------------------------------------------");
+    }
 
+    private void imprimirCabecalho() {
+        System.out.println("--------------------------------------------");
+        System.out.println("                  PIZZARIA                  ");
+        System.out.println("                 QuasePronto                ");
+        System.out.println("--------------------------------------------");
     }
 }

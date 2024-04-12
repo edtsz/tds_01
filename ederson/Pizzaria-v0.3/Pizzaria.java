@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Pizzaria {
@@ -15,9 +16,26 @@ public class Pizzaria {
             System.out.println("Escolha uma opção");
             System.out.println("1: Novo pedido");
             System.out.println("2: Imprimir histórico");
+            System.out.println("3: Imprimir pedido");
             System.out.println("#: Sair");
             String opcao = scan.nextLine();
 
+            if ( opcao.equals("2") ) {
+                faturamento.imprimirRelatorio();
+                continue;
+            }
+            if ( opcao.equals("3") ) {
+                System.out.printf("Qual pedido: %s\n", "");
+                while(true) {
+                    try {
+                        faturamento.imprimirPedido(Integer.parseInt(scan.nextLine()));
+                        break;
+                    } catch (InputMismatchException e) {
+                    } catch (IndexOutOfBoundsException e) {
+                    }
+                }
+                continue;
+            }
             if ( opcao.equals("#") ) {
                 break;
             }
@@ -47,8 +65,6 @@ public class Pizzaria {
 
             faturamento.addPedido(pedido);
         }
-
-        faturamento.imprimirRelatorio();
 
         scan.close();
     }

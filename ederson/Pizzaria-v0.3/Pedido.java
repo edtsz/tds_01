@@ -1,10 +1,18 @@
 import java.util.ArrayList;
 
 public class Pedido {
+    private Integer id = 0;
     private Double total = 0d;
     private ArrayList<ItemDoPedido> itemDoPedido = new ArrayList<ItemDoPedido>();
     private String cliente;
     private String localEntrega;
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public Integer getId() {
+        return this.id;
+    }
 
     public void adicionarItemDoPedido(ItemDoPedido item) {
         this.itemDoPedido.add(item);
@@ -50,7 +58,10 @@ public class Pedido {
     }
 
     public void imprimir() {
-        System.out.printf("Cliente  %35s\n", this.cliente);
+        System.out.printf("\033[1mPedido nº %2d %31s\033[0m\n",
+            this.getId(),
+            this.cliente
+        );
         for (int i =0; i < this.itemDoPedido.size(); i++) {
             System.out.printf("%34s : %7.2f\n",
                 this.itemDoPedido.get(i).getTipo()
@@ -60,9 +71,9 @@ public class Pedido {
             );
         }
         System.out.printf("%-34s : %7.2f\n",
-            "> Entrega " + this.getLocalEntrega(), 
+            "Entrega " + this.getLocalEntrega(), 
             this.getTaxaEntrega()
         );
-        System.out.printf("%-34s : %7.2f\n", "> Total", this.getTotal());
+        System.out.printf("%-34s : %7.2f\n", "Total", this.getTotal());
     }
 }
