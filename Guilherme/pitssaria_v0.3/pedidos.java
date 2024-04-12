@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class pedidos {
 
     private double total;
-    private int ID;
+    private double ID;
     private double taxaEntrega;
     private String localEntrega = "";
     private ArrayList<ItemDoPedido> itemDoPedido = new ArrayList<ItemDoPedido>();

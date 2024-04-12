@@ -27,9 +27,12 @@ public class ItemDoPedido {
         if (this.getTipo().equalsIgnoreCase("tradicional")) {
             return 40.0;
         }
-        else {
+        else if (this.getTipo().equalsIgnoreCase("especial")) {
             return 50.0;
         }
+        else if (this.getTipo().equalsIgnoreCase("mista")) {
+            return 60.0;
+        }
+        return 0.0;
     }
-
 }
