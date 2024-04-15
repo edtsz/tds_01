@@ -28,6 +28,12 @@ public class OrdemServico {
     public void setServico(Servico servicos) {
         this.servicos.add(servicos);
     }
+    public void setDescricao (String descricao) {
+        this.descricao = descricao;
+    }
+    public void getDescricao () {
+        return this.descricao;
+    }
 
     public void imprimir() {
         System.out.println("_________________________________");
@@ -47,16 +53,7 @@ public class OrdemServico {
         System.out.println("_________________________________");
         System.out.println("            Problemas            ");
         System.out.println("_________________________________");
-        for (int i = 0 ; i < this.servicos.size() ; i++) {
-            System.out.print(this.servicos.get(i).getDescricao());
-            System.out.print(": ");
-            Integer padding = 73 - (this.servicos.get(i).getDescricao().length() + 3);
-            System.out.printf("%"+padding+".2f\n", this.servicos.get(i).getValor());
-        }
-        System.out.println("_________________________________");
-        System.out.println("             Serviços            ");
-        System.out.println("Tempo previsto: " + this.getServico().getTempoCLi());
-        System.out.println("Tempo em que foi entrege: " + this.getServico().getTempoMec());
+        System.out.println("Problemas: " + this.descricao);
         System.out.println("_________________________________");
 
     }

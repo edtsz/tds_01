@@ -5,7 +5,6 @@ public class Mecanicaria {
     public static void main (String [] args) {
         
         Cliente cliente = new Cliente();
-        Servico servico = new Servico();
         Veiculo veiculo = new Veiculo();
         OrdemServico ordem = new OrdemServico();
 
@@ -42,17 +41,6 @@ public class Mecanicaria {
         veiculo.setAno(scan.nextInt());
 
         ordem.setVeiculo(veiculo);
-
-        System.out.println("Quais problemas o mecânico encontrou?");
-        servico.setProblemasMec(scan.nextLine());
-
-        System.out.println("Quanto tempo você espera que o carro esteja pronto?");
-        servico.setTempoCLi(scan.nextDouble());
-
-        System.out.println("Quanto tempo demorou para receber o veículo pronto?");
-        servico.setTempoMec(scan.nextDouble());
-
-        ordem.setServico(servico);
 
         ordem.imprimir();
     }
